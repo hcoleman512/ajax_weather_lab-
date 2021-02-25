@@ -1,6 +1,5 @@
 let weatherData, userInput;
 
-
 const $title = $('#title');
 const $temp = $('#temp');
 const $index = $('#index');
@@ -19,7 +18,7 @@ function handleGetData (event) {
  userInput = $input.val();
    // getting the user input
 console.log(userInput)
-    $.ajax(BASE_URL + userInput + '&appid=' + API_Key)
+    $.ajax(BASE_URL + userInput + '&appid=' + API_Key + '&units=imperial')
      .then(function(data) {
          weatherData = data;
          render();
